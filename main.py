@@ -1,6 +1,10 @@
-first_name = "John"
-food = "pizza"
-email = "john@example.com"
+price = 9.99
+gpa = 3.5
+distance = 100.0
 
-age = 30
-print(f"Hello, my name is {first_name}. I am {age} years old and I love {food}. You can contact me at {email}.")
+is_available = True
+
+print("Price:", price)
+print("GPA:", gpa)
+print("Distance:", distance)
+print("Is Available:", is_available)
