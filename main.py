@@ -1,27 +1,16 @@
-# Python Calculator
+# Weight Calculator
+# This program converts weight between kilograms and pounds.
 
-operator = input("Enter an operator (+, -, *, /): ")
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+weight = float(input("Enter your weight: "))
+unit = input("Enter the unit (kg/lb): ").strip().lower()
 
-if operator == '+':
-    result = num1 + num2
-    print(f"{num1} + {num2} = {result}")
-    
-elif operator == '-':
-    result = num1 - num2
-    print(f"{num1} - {num2} = {result}")
-
-elif operator == '*':
-    result = num1 * num2
-    print(f"{num1} * {num2} = {result}")
-
-elif operator == '/':
-    if num2 != 0:
-        result = num1 / num2
-        print(f"{num1} / {num2} = {result}")
-    else:
-        print("Error: Division by zero is not allowed.")
-
+if unit == "kg":
+    converted = weight * 2.20462
+    print(f"Your weight is {converted:.2f} lb.")
+elif unit == "lb":
+    converted = weight / 2.20462
+    print(f"Your weight is {converted:.2f} kg.")
 else:
-    print("Error: Invalid operator. Please use +, -, *, or /.")
+    print("Invalid unit. Please enter 'kg' or 'lb'.")
+    exit(1)
+
