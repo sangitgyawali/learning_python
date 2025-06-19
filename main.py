@@ -1,14 +1,7 @@
-# Madlibs game
-# A fun word game where you can create your own stories
-# by filling in the blanks with your own words.
+# Python Calculator
 
-adjective1 = input("Enter an adjective: ")
-noun1 = input("Enter a noun: ")
-verb1 = input("Enter a verb: ")
-adjective2 = input("Enter another adjective: ")
-adjective3 = input("Enter another adjective: ")
+operator = input("Enter an operator (+, -, *, /): ")
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
 
-print(f"Today I went to a {adjective1} zoo.")
-print(f"In an exhibit, I saw a {noun1}")
-print(f"{noun1} was {adjective2} and {verb1}")
-print(f"I was {adjective3}!")
+print(num1 + num2)
