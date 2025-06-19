@@ -1,16 +1,15 @@
-# Weight Calculator
-# This program converts weight between kilograms and pounds.
+# Temperature Converter
+# This program converts temperatures between Celsius and Fahrenheit.
 
-weight = float(input("Enter your weight: "))
-unit = input("Enter the unit (kg/lb): ").strip().lower()
+unit = input("Enter the unit of measurement (C for Celsius, F for Fahrenheit): ").strip().upper()
+temp = float(input("Enter the temperature value: "))
 
-if unit == "kg":
-    converted = weight * 2.20462
-    print(f"Your weight is {converted:.2f} lb.")
-elif unit == "lb":
-    converted = weight / 2.20462
-    print(f"Your weight is {converted:.2f} kg.")
+if unit == 'C':
+    converted_temp = (temp * 9/5) + 32
+    print(f"{temp}°C is equal to {converted_temp:.2f}°F")
+elif unit == 'F':
+    converted_temp = (temp - 32) * 5/9
+    print(f"{temp}°F is equal to {converted_temp:.2f}°C")
 else:
-    print("Invalid unit. Please enter 'kg' or 'lb'.")
-    exit(1)
+    print("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
 
