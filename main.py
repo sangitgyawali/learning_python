@@ -6,3 +6,7 @@ name_length = len(name)
 
 name_1 = name.lower()
 print(f"Hello, {name_1}! Your name has {name_length} characters.")
+
+if len(name) > 10:
+    print("Your name is quite long!")
+
