@@ -1,15 +1,13 @@
-# Temperature Converter
-# This program converts temperatures between Celsius and Fahrenheit.
+#Logical Operators
 
-unit = input("Enter the unit of measurement (C for Celsius, F for Fahrenheit): ").strip().upper()
-temp = float(input("Enter the temperature value: "))
+temp = 30
+is_sunny = True
 
-if unit == 'C':
-    converted_temp = (temp * 9/5) + 32
-    print(f"{temp}°C is equal to {converted_temp:.2f}°F")
-elif unit == 'F':
-    converted_temp = (temp - 32) * 5/9
-    print(f"{temp}°F is equal to {converted_temp:.2f}°C")
+if temp > 25 and is_sunny:
+    print("It's a warm and sunny day!")
+elif temp > 25 and not is_sunny:
+    print("It's warm but not sunny.")
+elif temp <= 25 and is_sunny:
+    print("It's cool but sunny.")
 else:
-    print("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
-
+    print("It's a cool and cloudy day.")
