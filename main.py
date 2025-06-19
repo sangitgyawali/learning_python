@@ -1,13 +1,8 @@
-#Logical Operators
+# String Manipulation Example
+# This program takes a user's full name as input, converts it to lowercase
+name = input("Enter your full name: ")
 
-temp = 30
-is_sunny = True
+name_length = len(name)
 
-if temp > 25 and is_sunny:
-    print("It's a warm and sunny day!")
-elif temp > 25 and not is_sunny:
-    print("It's warm but not sunny.")
-elif temp <= 25 and is_sunny:
-    print("It's cool but sunny.")
-else:
-    print("It's a cool and cloudy day.")
+name_1 = name.lower()
+print(f"Hello, {name_1}! Your name has {name_length} characters.")
