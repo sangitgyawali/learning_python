@@ -1,10 +1,16 @@
-# Nested Loops in python
+# lists ,sets, tuples, dictionaries in python
 
-rows = int(input("Enter the number of rows: "))
-columns = int(input("Enter the number of columns: "))
-symbol = input("Enter the symbol to use: ")
+fruits = ['apple', 'banana', 'cherry']
 
-for x in range(rows):
-    for y in range(columns):
-        print(symbol, end="")
-    print()
+print(fruits[0])
+print(fruits[1]) 
+print(fruits[2])
+print(fruits[-1]) 
+
+print(fruits[::-1]) # reverse order
+
+fruits.append('orange')  # add to the end
+print(fruits)
+
+fruits.insert(1, 'kiwi')  # add at index 1
+print(fruits)
