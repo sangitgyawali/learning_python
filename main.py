@@ -1,12 +1,6 @@
-# String Manipulation Example
-# This program takes a user's full name as input, converts it to lowercase
-name = input("Enter your full name: ")
+# for loops in python
 
-name_length = len(name)
+for x in reversed(range(1, 11)):
+    print(x)
 
-name_1 = name.lower()
-print(f"Hello, {name_1}! Your name has {name_length} characters.")
-
-if len(name) > 10:
-    print("Your name is quite long!")
-
+print("Done with loop")
