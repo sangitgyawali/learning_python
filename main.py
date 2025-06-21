@@ -1,10 +1,10 @@
-# Countdown timer using python
+# Nested Loops in python
 
-import time
+rows = int(input("Enter the number of rows: "))
+columns = int(input("Enter the number of columns: "))
+symbol = input("Enter the symbol to use: ")
 
-my_time = int(input("Enter the time in seconds: "))
-for x in range(0, my_time):
-    print(x)
-    time.sleep(1)
-
-print("TIME'S UP!")
+for x in range(rows):
+    for y in range(columns):
+        print(symbol, end="")
+    print()
