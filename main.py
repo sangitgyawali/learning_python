@@ -1,9 +1,10 @@
-# for loops in python
+# Countdown timer using python
 
-for x in range(1, 21):
-    if x == 13:
-        break
-    else:
-        print(x)
+import time
 
-print("Done with loop")
+my_time = int(input("Enter the time in seconds: "))
+for x in range(0, my_time):
+    print(x)
+    time.sleep(1)
+
+print("TIME'S UP!")
