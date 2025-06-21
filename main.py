@@ -1,16 +1,20 @@
-# lists ,sets, tuples, dictionaries in python
+# Shopping cart program
 
-fruits = ['apple', 'banana', 'cherry']
+foods = []
+prices = []
+total = 0
 
-print(fruits[0])
-print(fruits[1]) 
-print(fruits[2])
-print(fruits[-1]) 
+while True:
+    food = input("Enter the food to buy (q to quit): ")
+    if food.lower() == 'q':
+        break
+    else:
+        price = float(input(f"Enter the price of a {food}: "))
+        foods.append(food)
+        prices.append(price)
 
-print(fruits[::-1]) # reverse order
-
-fruits.append('orange')  # add to the end
-print(fruits)
-
-fruits.insert(1, 'kiwi')  # add at index 1
-print(fruits)
+print("\nYour shopping cart:")
+for food in foods:
+    print(f"{food} - ${prices[foods.index(food)]:.2f}")
+total = sum(prices)
+print(f"\nTotal: ${total:.2f}")
