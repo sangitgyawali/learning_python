@@ -1,20 +1,11 @@
-# Shopping cart program
-
-foods = []
-prices = []
-total = 0
+# Simple chatbot in Python
 
 while True:
-    food = input("Enter the food to buy (q to quit): ")
-    if food.lower() == 'q':
+    user = input("You: ")
+    if "hello" in user.lower():
+        print("Bot: Hi there!")
+    elif "bye" in user.lower():
+        print("Bot: Goodbye!")
         break
     else:
-        price = float(input(f"Enter the price of a {food}: "))
-        foods.append(food)
-        prices.append(price)
-
-print("\nYour shopping cart:")
-for food in foods:
-    print(f"{food} - ${prices[foods.index(food)]:.2f}")
-total = sum(prices)
-print(f"\nTotal: ${total:.2f}")
+        print("Bot: I don't understand that.")
