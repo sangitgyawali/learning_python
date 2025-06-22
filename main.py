@@ -1,11 +1,16 @@
-# Simple chatbot in Python
+# Rock Paper Scissors Game
 
-while True:
-    user = input("You: ")
-    if "hello" in user.lower():
-        print("Bot: Hi there!")
-    elif "bye" in user.lower():
-        print("Bot: Goodbye!")
-        break
-    else:
-        print("Bot: I don't understand that.")
+import random
+
+choices = ['rock', 'paper', 'scissors']
+computer = random.choice(choices)
+user = input("Enter rock, paper, or scissors: ").lower()
+
+if user == computer:
+    print("It's a tie!")
+elif (user == "rock" and computer == "scissors") or \
+     (user == "paper" and computer == "rock") or \
+     (user == "scissors" and computer == "paper"):
+    print(f"You win! Computer chose {computer}")
+else:
+    print(f"You lose! Computer chose {computer}")
