@@ -1,16 +1,14 @@
-# Rock Paper Scissors Game
+# QR code generator
 
-import random
+import qrcode
 
-choices = ['rock', 'paper', 'scissors']
-computer = random.choice(choices)
-user = input("Enter rock, paper, or scissors: ").lower()
+def generate_qr():
+    data = input("Enter text or URL to generate QR code: ")
+    filename = input("Enter filename to save (without .png): ")
 
-if user == computer:
-    print("It's a tie!")
-elif (user == "rock" and computer == "scissors") or \
-     (user == "paper" and computer == "rock") or \
-     (user == "scissors" and computer == "paper"):
-    print(f"You win! Computer chose {computer}")
-else:
-    print(f"You lose! Computer chose {computer}")
+    qr = qrcode.make(data)
+    qr.save(f"{filename}.png")
+    print(f"✅ QR Code saved as {filename}.png")
+
+generate_qr()
+
