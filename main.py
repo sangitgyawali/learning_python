@@ -1,9 +1,7 @@
-# Factorial Calculator using Python
+# Fibonacci Series Generator using Python
 
-num = int(input("Enter a number: "))
-factorial = 1
-
-for i in range(1, num + 1):
-    factorial *= i
-
-print(f"Factorial of {num} is {factorial}")
+n = int(input("Enter how many terms: "))
+a, b = 0, 1
+for _ in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
