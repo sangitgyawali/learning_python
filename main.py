@@ -12,7 +12,8 @@ total = 0
 
 print("------ Menu ------")
 for key, value in menu.items():
-    print(f"{key:10 }: ${value:.2f}")
+    print(f"{key:10}: ${value:.2f}")
+
 print("-------------------")
 
 while True:
