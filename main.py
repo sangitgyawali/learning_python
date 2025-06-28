@@ -7,7 +7,7 @@ capitals = {
     "India": "New Delhi"
 }
 
-print(capitals.get("USA"))
-print(capitals.get("France"))
-print(capitals.get("Japan"))
-print(capitals.get("India")) 
+if capitals.get("USA"):
+    print("Japan is in the dictionary.")
+else:
+    print("Japan is not in the dictionary.")
