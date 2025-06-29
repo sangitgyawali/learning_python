@@ -1,12 +1,9 @@
-# Random numbers in Python
+# Number Guessing Game in python
 
 import random
 
-low = 1
-high = 10
-cards = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
+lowest_number = 1
+highest_number = 100
+answer = random.randint(lowest_number, highest_number)
 
-random.shuffle(cards)
-cards = cards[low - 1:high]
-
-print(cards)
+print(answer)
