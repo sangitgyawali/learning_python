@@ -1,7 +1,9 @@
-# Random numbers
+# Random numbers in Python
 
 import random
 
-number = random.randint(1, 20)
+low = 1
+high = 10
 
-print(number)
+options = random.choice(["Rock", "Paper", "Scissors"])
+print((options))
