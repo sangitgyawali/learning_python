@@ -1,35 +1,21 @@
-# Number Guessing Game in python
+# Dice rollar program in Python
 
 import random
 
-lowest_number = 1
-highest_number = 100
-answer = random.randint(lowest_number, highest_number)
-guess = 0
-is_running = True
+def roll_dice():
+    while True:
+        try:
+            sides = int(input("Enter the number of sides on the dice (6, 10, 20, etc.): "))
+            if sides < 1:
+                print("Please enter a positive integer.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
 
-print("Welcome to the Number Guessing Game!")
-print(f"Guess a number between {lowest_number} and {highest_number}.")
+    roll = random.randint(1, sides)
+    print(f"You rolled a {roll} on a {sides}-sided dice.")
 
-while is_running:
-    guess = input("Make a guess: ")
+if __name__ == "__main__":
+    roll_dice()
 
-    if not guess.isdigit():
-        print("Please enter a valid number.")
-        continue
-
-    guess = int(guess)
-
-    if guess < lowest_number or guess > highest_number:
-        print(f"Your guess must be between {lowest_number} and {highest_number}.")
-        continue
-
-    if guess < answer:
-        print("Too low! Try again.")
-    elif guess > answer:
-        print("Too high! Try again.")
-    else:
-        print("Congratulations! You've guessed the number!")
-        is_running = False
-
-print("Thanks for playing!")
