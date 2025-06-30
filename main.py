@@ -3,6 +3,7 @@
 import random
 
 def roll_dice():
+    print("Welcome to the Dice Roller!")
     while True:
         try:
             sides = int(input("Enter the number of sides on the dice (6, 10, 20, etc.): "))
