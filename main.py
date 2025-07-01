@@ -1,13 +1,8 @@
 # Functions in Python
 
-def greet(name):
+def display_invoice(username, amount, due_date):
+    print(f"Hello {username},")
+    print(f"Your invoice amount is ${amount}.")
+    print(f"Please pay by {due_date}.")
 
-    print(f"Hello, {name}!")
-    print(f"This is a Python program.")
-    print("Let's define some functions.")
-    print()
-
-greet("Bob")
-greet("Alice")
-greet("Charlie")
-
+display_invoice("John Doe", 400, "2025-01-07")
