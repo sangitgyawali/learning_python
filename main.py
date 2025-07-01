@@ -1,8 +1,22 @@
-# Functions in Python
+# Calculator using functions in Python
 
-def display_invoice(username, amount, due_date):
-    print(f"Hello {username},")
-    print(f"Your invoice amount is ${amount}.")
-    print(f"Please pay by {due_date}.")
+def add(x, y):
+    return x + y
 
-display_invoice("John Doe", 400, "2025-01-07")
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Error! Division by zero."
+    return x / y
+
+def main():
+    print(add(5, 3))
+    print(subtract(5, 3))
+    print(multiply(5, 3))
+    print(divide(5, 3))
+    print(divide(5, 0))
