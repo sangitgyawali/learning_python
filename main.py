@@ -1,21 +1,8 @@
-# Dice rollar program in Python
+# Functions in Python
 
-import random
+def display_invoice(username, amount, due_date):
+    print(f"Hello {username},")
+    print(f"Your invoice amount is ${amount}.")
+    print(f"Please pay by {due_date}.")
 
-def roll_dice():
-    while True:
-        try:
-            sides = int(input("Enter the number of sides on the dice (6, 10, 20, etc.): "))
-            if sides < 1:
-                print("Please enter a positive integer.")
-                continue
-            break
-        except ValueError:
-            print("Invalid input. Please enter a valid integer.")
-
-    roll = random.randint(1, sides)
-    print(f"You rolled a {roll} on a {sides}-sided dice.")
-
-if __name__ == "__main__":
-    roll_dice()
-
+display_invoice("John Doe", 400, "2025-01-07")
