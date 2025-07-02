@@ -1,9 +1,22 @@
-# List comprehension in Python
+# Match case statement in Python
 
-doubles = [x * 2 for x in range(1, 11)]
-triples = [x * 3 for x in range(1, 11)]
-squares = [x ** 2 for x in range(1, 11)]
-
-print(doubles)
-print(triples)
-print(squares)
+def day_of_week(day):
+    match day:
+        case 1:
+            return "Monday"
+        case 2:
+            return "Tuesday"
+        case 3:
+            return "Wednesday"
+        case 4:
+            return "Thursday"
+        case 5:
+            return "Friday"
+        case 6:
+            return "Saturday"
+        case 7:
+            return "Sunday"
+        case _:
+            return "Invalid day"
+        
+print(day_of_week(1))
