@@ -1,7 +1,10 @@
 # Iterables in Python
 
-fruits = ['apple', 'banana', 'cherry']
+my_dictionary = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
 
-for fruit in reversed(fruits):
-    print(fruit)
-
+for key, value in my_dictionary.items():
+    print(f"{key}: {value}")
