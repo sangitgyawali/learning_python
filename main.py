@@ -1,12 +1,10 @@
-# Functions in python
+# Args and kwargs in Python
 
-import time
+def add(*args):
+    total = 0
+    for arg in args:
+        total += arg
+    return total
 
-def count(start=0, end=10):
+print(add(1, 2, 3)) 
 
-    for x in range(start, end+1):
-        print(x)
-        time.sleep(1)
-    print("Counting finished.")
-
-count(1, 10)
