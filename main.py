@@ -1,17 +1,10 @@
-# Args and kwargs in Python
-# Kwargs
+# Iterables in Python
 
-def shipping_label(*args , **kwargs):
-    for arg in args:
-        print(arg, end = " ")
-        print()
-        for key, value in kwargs.items():
-            print(f"{key}: {value}")
+my_dictionary = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
 
-
-shipping_label(
-    "1234 Elm St",
-    city="Anytown",
-    state="CA",
-    zip="12345"
-)
+for key, value in my_dictionary.items():
+    print(f"{key}: {value}")
