@@ -1,10 +1,12 @@
-# Iterables in Python
+# Membership operators in Python
 
-my_dictionary = {
-    "name": "John",
-    "age": 30,
-    "city": "New York"
-}
+word = "APPLE"
 
-for key, value in my_dictionary.items():
-    print(f"{key}: {value}")
+letter = input("Enter a letter: ").upper()
+
+if letter in word:
+    print(f"{letter} is in {word}")
+else:
+    print(f"{letter} is not in {word}")
+
+    
