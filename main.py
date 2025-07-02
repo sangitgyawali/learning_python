@@ -1,9 +1,9 @@
-# Membership operators in Python
+# List comprehension in Python
 
-email = "alice@example.com"
+doubles = [x * 2 for x in range(1, 11)]
+triples = [x * 3 for x in range(1, 11)]
+squares = [x ** 2 for x in range(1, 11)]
 
-if "@" in email:
-    print("Email contains '@' symbol.")
-
-else:
-    print("Email does not contain '@' symbol.")
+print(doubles)
+print(triples)
+print(squares)
