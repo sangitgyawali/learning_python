@@ -1,12 +1,9 @@
-# Membership operators in Python
+# List comprehension in Python
 
-word = "APPLE"
+doubles = [x * 2 for x in range(1, 11)]
+triples = [x * 3 for x in range(1, 11)]
+squares = [x ** 2 for x in range(1, 11)]
 
-letter = input("Enter a letter: ").upper()
-
-if letter in word:
-    print(f"{letter} is in {word}")
-else:
-    print(f"{letter} is not in {word}")
-
-    
+print(doubles)
+print(triples)
+print(squares)
