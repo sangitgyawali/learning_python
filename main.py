@@ -1,10 +1,7 @@
 # Args and kwargs in Python
 
-def add(*args):
-    total = 0
+def display_name(*args):
     for arg in args:
-        total += arg
-    return total
+        print(arg, end=" ")
 
-print(add(1, 2, 3)) 
-
+display_name("Alice", "Bob", "Charlie")
