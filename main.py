@@ -1,9 +1,17 @@
-# Functions in python
+# Args and kwargs in Python
+# Kwargs
 
-def create_name(first_name, last_name):
-    first_name = first_name.capitalize()
-    last_name = last_name.capitalize()
-    return f"{first_name} {last_name}"
+def shipping_label(*args , **kwargs):
+    for arg in args:
+        print(arg, end = " ")
+        print()
+        for key, value in kwargs.items():
+            print(f"{key}: {value}")
 
-full_name = create_name("john", "doe")
-print(full_name)
+
+shipping_label(
+    "1234 Elm St",
+    city="Anytown",
+    state="CA",
+    zip="12345"
+)
