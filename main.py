@@ -1,12 +1,15 @@
 # Membership operators in Python
 
-word = "APPLE"
+grades = {
+    "Alice": 85,
+    "Bob": 92,
+    "Charlie": 78
+}
 
-letter = input("Enter a letter: ").upper()
+student = input("Enter the student's name: ")
 
-if letter in word:
-    print(f"{letter} is in {word}")
+if student in grades:
+    print(f"{student} has a grade of {grades[student]}.")
 else:
-    print(f"{letter} is not in {word}")
+    print(f"{student} is not in the gradebook.")
 
-    
