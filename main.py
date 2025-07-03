@@ -1,16 +1,9 @@
 # Modules in Python
 
-pi = 3.14159
+import mymath
 
-def square(x):
-    return x ** 2
+x = 10
+y = 5
 
-def cube(x):
-    return x ** 3
-
-def circumference(radius):
-    return 2 * pi * radius
-
-print(square(2))
-print(cube(3))
-print(circumference(4))
+print("Addition:", mymath.add(x, y))
+print("Subtraction:", mymath.subtract(x, y))
