@@ -1,12 +1,12 @@
 # Scope Resolution in Python
 
 def func1():
-    a = 1
-    print(a)
+    x = 1
+    print(x)
 
 def func2():
-    b = 2
-    print(b)
+    x = 2
+    print(x)
 
 func1()
 func2()
