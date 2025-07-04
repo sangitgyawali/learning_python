@@ -1,9 +1,12 @@
-# Modules in Python
+# Scope Resolution in Python
 
-import mymath
+def func1():
+    a = 1
+    print(a)
 
-x = 10
-y = 5
+def func2():
+    b = 2
+    print(b)
 
-print("Addition:", mymath.add(x, y))
-print("Subtraction:", mymath.subtract(x, y))
+func1()
+func2()
