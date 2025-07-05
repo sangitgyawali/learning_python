@@ -8,6 +8,7 @@ def deposit():
 
     if amount < 0:
         print("That's not a valid amount")
+        return 0
 
     else:
         return amount
