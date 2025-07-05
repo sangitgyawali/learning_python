@@ -5,3 +5,6 @@ def main():
     print("This is script1")
     favourite_food("Pizza")
     print("GoodBye!")
+
+if __name__ == '__main__':
+    main()
