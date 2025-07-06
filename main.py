@@ -13,8 +13,8 @@ def main():
     balance = True
 
     print("***********************")
-    print("Welcome to Python slots")
-    print("Symbols: ")
+    print("Welcome to Python Slots")
+    print("Symbols: 🍒 🍉 🍋 🔔 ⭐")
     print("***********************")
 
 if __name__ == '__main__':
