@@ -10,7 +10,12 @@ def get_payout():
     pass
 
 def main():
-    pass
+    balance = True
+
+    print("***********************")
+    print("Welcome to Python slots")
+    print("Symbols: ")
+    print("***********************")
 
 if __name__ == '__main__':
     main()
