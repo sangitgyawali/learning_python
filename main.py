@@ -1,7 +1,9 @@
 # Slot machine in Python
 
 def spin_row():
-    pass
+    Symbols = ['🍒', '🍉', '🍋', '🔔', '⭐']
+
+    return [random.choice(Symbols) for _ in range(3)]
 
 def print_row():
     pass
@@ -37,6 +39,9 @@ def main():
             continue
 
         balance -= bet
+
+        row = spin_row()
+        print(row)
 
 if __name__ == '__main__':
     main()
