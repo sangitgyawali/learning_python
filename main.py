@@ -26,7 +26,17 @@ def main():
             print("Please enter a valid number")
             continue
 
+        bet = int(bet)
 
+        if bet > balance:
+            print("Insufficient funds")
+            continue
+
+        if bet <= balance:
+            print("Bet must be greater than 0")
+            continue
+
+        balance -= bet
 
 if __name__ == '__main__':
     main()
