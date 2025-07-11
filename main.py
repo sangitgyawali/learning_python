@@ -1,4 +1,4 @@
-# Encryption Program in Python
+# Decryption Program in Python
 
 import random
 import string
@@ -12,12 +12,12 @@ random.shuffle(key)
 print(f"chars: {chars}")
 print(f"key: {key}")
 
-plain_text = input("Enter a message to encrypt: ")
-cipher_text = ""
+cipher_text = input("Enter a message to encrypt: ")
+plain_text = ""
 
-for letter in plain_text:
+for letter in cipher_text:
     index = chars.input(letter)
-    cipher_text += key[index]
+    plain_text += key[index]
 
-print(f"Original message: {plain_text}")
-print(f"Encrypted message: {cipher_text}")
+print(f"Encrypted message: {plain_text}")
+print(f"Original message: {cipher_text}")
