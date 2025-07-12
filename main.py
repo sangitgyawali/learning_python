@@ -1,23 +1,16 @@
-# Decryption Program in Python
-
+# Hangman Game in Python
 import random
-import string
 
-chars = " " + string.whitespace + string.punctuation + string.digits + string.ascii_letters
-chars = list(chars)
-key = chars.copy()
+words = ("apple", "orange", "banana", "coconut", "pineapple")
 
-random.shuffle(key)
+#dictionary of key:()
+hangman_art = {
+    0: ("  ", "  ", "  "),
+    1: (" o ", "  ", "  "),
+    2: (" o ", " | ", "  "),
+    3: (" o ", "/| ", "  "),
+    4: (" o ", "/|\\", "  "),
+    5: (" o ", "/|\\", "/  "),
+    6: (" o ", "/|\\", "/ \\")
+}
 
-print(f"chars: {chars}")
-print(f"key: {key}")
-
-cipher_text = input("Enter a message to encrypt: ")
-plain_text = ""
-
-for letter in cipher_text:
-    index = chars.input(letter)
-    plain_text += key[index]
-
-print(f"Encrypted message: {plain_text}")
-print(f"Original message: {cipher_text}")
