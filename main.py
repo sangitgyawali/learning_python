@@ -14,5 +14,19 @@ hangman_art = {
     6: (" o ", "/|\\", "/ \\")
 }
 
-for line in hangman_art[4]:
-    print(line)
+def display_man(wrong_guesses):
+    pass
+
+def display_hint(hint):
+    pass
+
+def display_answer(answer):
+    pass
+
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()
+
+    
