@@ -14,3 +14,5 @@ hangman_art = {
     6: (" o ", "/|\\", "/ \\")
 }
 
+for line in hangman_art[4]:
+    print(line)
