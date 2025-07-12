@@ -1,42 +1,18 @@
-# Slot machine in Python
+# Hangman Game in Python
+import random
 
-def spin_row():
-    pass
+words = ("apple", "orange", "banana", "coconut", "pineapple")
 
-def print_row():
-    pass
+#dictionary of key:()
+hangman_art = {
+    0: ("  ", "  ", "  "),
+    1: (" o ", "  ", "  "),
+    2: (" o ", " | ", "  "),
+    3: (" o ", "/| ", "  "),
+    4: (" o ", "/|\\", "  "),
+    5: (" o ", "/|\\", "/  "),
+    6: (" o ", "/|\\", "/ \\")
+}
 
-def get_payout():
-    pass
-
-def main():
-    balance = 100
-
-    print("***********************")
-    print("Welcome to Python Slots")
-    print("Symbols: 🍒 🍉 🍋 🔔 ⭐")
-    print("***********************")
-
-    while balance > 0:
-        print(f"Current balance: ${balance}")
-
-        bet = input("Place your bet amount: ")
-
-        if not bet.isdigit():
-            print("Please enter a valid number")
-            continue
-
-        bet = int(bet)
-
-        if bet > balance:
-            print("Insufficient funds")
-            continue
-
-        if bet <= balance:
-            print("Bet must be greater than 0")
-            continue
-
-        balance -= bet
-
-if __name__ == '__main__':
-    main()
+for line in hangman_art[4]:
+    print(line)
