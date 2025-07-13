@@ -5,7 +5,7 @@ class Animal:
         self.name = name
         self.is_alive = True
 
-    def eat(self);
+    def eat(self):
         print(f"{self.name} is eating")
 
     def sleep(self):
@@ -23,3 +23,7 @@ class Mouse(Animal):
 dog = Dog("Scooby")
 cat = Cat("Garfield")
 mouse = Mouse("Mickey")
+
+print(cat.name)
+cat.eat()
+cat.sleep()
