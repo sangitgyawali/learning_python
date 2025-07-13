@@ -1,23 +1,25 @@
-# Class variables in Python
+# Inheritence in Python
 
-class Student:
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        self.is_alive = True
 
-    class_year = 2025
-    num_students = 0
+    def eat(self);
+        print(f"{self.name} is eating")
 
-    def __init__(self, name, age):
-        self.name = name 
-        self.age = age
-        Student.num_students += 1
+    def sleep(self):
+        print(f"{self.name} is sleeping")
 
-student1 = Student("Alex", 30)
-student2 = Student("Milan", 35)
-student3 = Student("Jay", 55)
-student4 = Student("Frank", 27)
+class Dog(Animal):
+    pass
 
-print(f"My graduating class of {Student.class_year} has {Student.num_students} students ")
+class Cat(Animal):
+    pass
 
-print(student1.name)
-print(student2.name)
-print(student3.name)
-print(student4.name)
+class Mouse(Animal):
+    pass
+
+dog = Dog("Scooby")
+cat = Cat("Garfield")
+mouse = Mouse("Mickey")
