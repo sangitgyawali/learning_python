@@ -1,30 +1,25 @@
-# Inheritence in Python
+# Multiple Inheritence in Python
 
-class Animal:
-    def __init__(self, name):
-        self.name = name
-        self.is_alive = True
+class Prey:
+    def flee(self):
+        print("This animal is fleeing")
 
-    def eat(self):
-        print(f"{self.name} is eating")
+class Predator:
+    def hunt(self):
+        print("This animal is hunting")
 
-    def sleep(self):
-        print(f"{self.name} is asleep")
+class Rabbit(Prey):
+    pass
 
-class Dog(Animal):
-    def speak(self):
-        print("WOOF!")
+class Hawk(Predator):
+    pass
 
-class Cat(Animal):
-    def speak(self):
-        print("MEOW!")
+class Fish(Prey, Predator):
+    pass
 
-class Mouse(Animal):
-    def speak(self):
-        print("SQUEEK!")
 
-dog = Dog("Scooby")
-cat = Cat("Garfield")
-mouse = Mouse("Mickey")
+rabbit = Rabbit()
+hawk = Hawk()
+fish = Fish()
 
-cat.speak()
+hawk.hunt()
