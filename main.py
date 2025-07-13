@@ -6,5 +6,4 @@ car2 = Car("Corvette", 2024, "Blue", True)
 car3 = Car("Charger", 2022, "Yellow", False)
 
 
-car2.drive()
-car2.stop()
+car1.describe()
