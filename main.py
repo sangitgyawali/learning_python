@@ -1,23 +1,25 @@
-# Class variables in Python
+# Multiple Inheritence in Python
 
-class Student:
+class Prey:
+    def flee(self):
+        print("This animal is fleeing")
 
-    class_year = 2025
-    num_students = 0
+class Predator:
+    def hunt(self):
+        print("This animal is hunting")
 
-    def __init__(self, name, age):
-        self.name = name 
-        self.age = age
-        Student.num_students += 1
+class Rabbit(Prey):
+    pass
 
-student1 = Student("Alex", 30)
-student2 = Student("Milan", 35)
-student3 = Student("Jay", 55)
-student4 = Student("Frank", 27)
+class Hawk(Predator):
+    pass
 
-print(f"My graduating class of {Student.class_year} has {Student.num_students} students ")
+class Fish(Prey, Predator):
+    pass
 
-print(student1.name)
-print(student2.name)
-print(student3.name)
-print(student4.name)
+
+rabbit = Rabbit()
+hawk = Hawk()
+fish = Fish()
+
+hawk.hunt()
