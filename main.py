@@ -1,33 +1,41 @@
-# Super Function in Python
+from abc import ABC, abstractmethod
 
-class Shape:
-    def __init__(self, color , is_filled):
-        self.color = color
-        self.is_filled = is_filled
-        
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
 class Circle(Shape):
-    def __init__(self, color, is_filled, radius):
-        super().__init__(color, is_filled)
+    def __init__(self, radius):
         self.radius = radius
-        
+
+    def area(self):
+        return 3.14159 * self.radius ** 2
+
 class Square(Shape):
-    def __init__(self, color, is_filled, width):
-        super().__init__(color, is_filled)
-        self.width = width
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return self.side ** 2
 
 class Triangle(Shape):
-    def __init__(self, color, is_filled, width, height):
-        super().__init__(color, is_filled)
-        self.width = width
+    def __init__(self, base, height):
+        self.base = base
         self.height = height
 
-circle = Circle(color="red", is_filled=True, radius=5)
-square = Square(color="blue", is_filled=False, width=6)
-triangle = Triangle(color="green", is_filled=True, width=7, height=8)
+    def area(self):
+        return 0.5 * self.base * self.height
 
-print(triangle.color)
-print(triangle.is_filled)
-print(triangle.color)
-print(triangle.is_filled)
-print(f"{triangle.width}cm")
-print(f"{triangle.height}cm")
+class Pizza(Shape): 
+    def __init__(self, topping, radius):
+        self.topping = topping
+        self.radius = radius
+
+    def area(self):
+        return 3.14159 * self.radius ** 2
+
+shapes = [Circle(4), Square(5), Triangle(6, 7), Pizza("pepperoni", 15)]
+
+for shape in shapes:
+    print(f"{shape.__class__.__name__} area: {shape.area():.2f} cm^2")
