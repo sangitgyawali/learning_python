@@ -1,9 +1,13 @@
-# Object Oriented Programming in Python
-from car import Car
+# Class variables in Python
 
-car1 = Car("Mustang", 2025, "Green", False)
-car2 = Car("Corvette", 2024, "Blue", True)
-car3 = Car("Charger", 2022, "Yellow", False)
+class Student:
 
+    def __init__(self, name, age):
+        self.name = name 
+        self.age = age
 
-car1.describe()
+student1 = Student("Alex", 30)
+student2 = Student("Milan", 35)
+
+print(student2.name)
+print(student2.age)
