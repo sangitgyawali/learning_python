@@ -9,21 +9,22 @@ class Animal:
         print(f"{self.name} is eating")
 
     def sleep(self):
-        print(f"{self.name} is sleeping")
+        print(f"{self.name} is asleep")
 
 class Dog(Animal):
-    pass
+    def speak(self):
+        print("WOOF!")
 
 class Cat(Animal):
-    pass
+    def speak(self):
+        print("MEOW!")
 
 class Mouse(Animal):
-    pass
+    def speak(self):
+        print("SQUEEK!")
 
 dog = Dog("Scooby")
 cat = Cat("Garfield")
 mouse = Mouse("Mickey")
 
-print(cat.name)
-cat.eat()
-cat.sleep()
+cat.speak()
