@@ -1,25 +1,17 @@
-# Duck Typing in Python
+# Static Methods in Python
 
-class Animal:
-    alive  = True
+class Employee:
 
-class Dog(Animal):
-    def speak(self):
-        print("WOOF!")
+    def __init__(self, name, position):
+        self.name = name
+        self.position = position
 
-class Cat(Animal):
-    def speak(self):
-        print("MEOW!")
-
-class Car:
-
-    alive = True
-
-    def speak(self):
-        print("HONK!")
-
-animals = [Dog(), Cat(), Car()]
-
-for animal in animals:
-    animal.speak()
-    print(animal.alive)
+    def get_info(self):
+        return f"{self.name} = {self.position}"
+    
+    @staticmethod
+    def is_valid_position(position):
+        valid_positions = ["Manager", "Cashier", "Cook", "Janitor"]
+        return position in valid_positions
+    
+print(Employee.is_valid_position("Rocket Scientist"))
