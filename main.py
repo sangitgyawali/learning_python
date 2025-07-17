@@ -1,34 +1,23 @@
-# Class Methods in Python
+# Magic Methods in Python
 
-class Student:
+class Book:
 
-    count = 0
-    total_gpa = 0
+    def __init__(self, title, author, num_pages):
+        self.title = title
+        self.author = author
+        self.num_pages = num_pages
 
-    def __init__(self, name, gpa):
-        self.name = name
-        self.gpa = gpa
-        Student.count += 1
-        Student.total_gpa += gpa
+    def __str__(self):
+        return f"'{self.title}' by {self.author}, {self.num_pages} pages"
+    
+    def __eq__(self, other):
+        return self.title == other.title and self.author == other.author
 
-    # INSTANCE METHOD
-    def get_info(self):
-        return f"{self.name} {self.gpa}"
+book1 = Book("The Hobbit", "J.R.R. Tolkien", 310)
+book2 = Book("1984", "George Orwell", 328)
+book3 = Book("To Kill a Mockingbird", "Harper Lee", 281)
 
-    @classmethod
-    def get_count(cls):
-        return f"Total # of students: {cls.count}"
 
-    @classmethod
-    def get_average_gpa(cls):
-        if cls.count == 0:
-            return 0
-        else:
-            return f"{cls.total_gpa / cls.count}"
-        
-student1 = Student("Spongebob",3.2)
-student2 = Student("Patrick",3.0)
-student3 = Student("Sandy",4.0)
+print(book3)
+print(book1 == book2)
 
-print(Student.get_count())
-print(Student.get_average_gpa())
