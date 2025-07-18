@@ -17,13 +17,20 @@ class Rectangle:
     def width(self, new_width):
         if new_width > 0:
             self._width = new_width
+        else:
+            print("width must be greater than zero")
 
+    @height.setter
+    def height(self, new_height):
+        if new_height > 0:
+            self._height = new_height
         else:
             print("height must be greater than zero")
 
 rectangle = Rectangle(3, 4)
 
-rectangle.width = 0
+rectangle.width = 5
+rectangle.height = 6
 
 print(rectangle._width)
-print(rectangle.height)
+print(rectangle._height)
