@@ -9,3 +9,10 @@ except ZeroDivisionError:
 except ValueError:
     print("Enter only numbers please!")
 
+except Exception:
+    print("Something went wrong")
+
+finally:
+    print("Do some cleanup here")
+
+
