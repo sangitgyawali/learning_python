@@ -1,19 +1,14 @@
-# Property Decorator in Python
+# Decorator
 
-class Rectangle:
-    def __init__(self, width, height):
-        self._width = width
-        self._height = height
 
-    @property
-    def width(self):
-        return f"{self._width:.1f}cm"
+def add_sprinkles(func):
+    def wrapper():
+        print("You add sprinkles")
+        func()
+    return wrapper
+        
+@add_sprinkles
+def get_ice_cream():
+    print("Here is your ice cream")
 
-    @property
-    def height(self):
-        return f"{self._height:.1f}cm"
-
-rectangle = Rectangle(3, 4)
-
-print(rectangle._width)
-print(rectangle.height)
+get_ice_cream()
