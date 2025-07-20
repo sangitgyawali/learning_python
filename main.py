@@ -1,20 +1,20 @@
 # Decorator in Python
 
 def add_sprinkles(func):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         print("You add sprinkles")
-        func()
+        return func(*args, **kwargs)
     return wrapper
 
 def add_fudge(func):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         print("You add fudge")
-        func()
+        return func(*args, **kwargs)
     return wrapper
-        
+
 @add_sprinkles
 @add_fudge
-def get_ice_cream():
-    print("Here is your ice cream")
+def get_ice_cream(flavor):
+    print(f"Here is your {flavor} ice cream")
 
-get_ice_cream()
+get_ice_cream("Vanilla")
