@@ -1,14 +1,18 @@
-# Decorator
+# Exception in Python
+
+try:
+    number = int(input("Enter a number:"))
+    print(1 / number)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+
+except ValueError:
+    print("Enter only numbers please!")
+
+except Exception:
+    print("Something went wrong")
+
+finally:
+    print("Do some cleanup here")
 
 
-def add_sprinkles(func):
-    def wrapper():
-        print("You add sprinkles")
-        func()
-    return wrapper
-        
-@add_sprinkles
-def get_ice_cream():
-    print("Here is your ice cream")
-
-get_ice_cream()
