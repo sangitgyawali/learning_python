@@ -1,18 +1,11 @@
-# Exception in Python
+# File Detection in Python
 
-try:
-    number = int(input("Enter a number:"))
-    print(1 / number)
-except ZeroDivisionError:
-    print("You can't divide by zero!")
+import os
 
-except ValueError:
-    print("Enter only numbers please!")
+file_path = "test.txt"
 
-except Exception:
-    print("Something went wrong")
+if os.path.exists(file_path):
+    print(f"The location '{file_path}' exists")
 
-finally:
-    print("Do some cleanup here")
-
-
+else:
+    print("That location doesn't exist")
