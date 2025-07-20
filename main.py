@@ -1,20 +1,11 @@
-# Decorator in Python
+# Exception in Python
 
-def add_sprinkles(func):
-    def wrapper(*args, **kwargs):
-        print("You add sprinkles")
-        return func(*args, **kwargs)
-    return wrapper
+try:
+    number = int(input("Enter a number:"))
+    print(1 / number)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
 
-def add_fudge(func):
-    def wrapper(*args, **kwargs):
-        print("You add fudge")
-        return func(*args, **kwargs)
-    return wrapper
+except ValueError:
+    print("Enter only numbers please!")
 
-@add_sprinkles
-@add_fudge
-def get_ice_cream(flavor):
-    print(f"Here is your {flavor} ice cream")
-
-get_ice_cream("Vanilla")
