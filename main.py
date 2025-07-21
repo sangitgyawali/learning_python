@@ -4,8 +4,11 @@ employees = ["Eugene", "Squidward", "Spongebob", "Patrick"]
 
 file_path = "output.txt"
 
-with open(file_path, "w") as file:
-    file.write(txt_data)
-    print(f"txt file '{file_path}' was created")
+
+try:
+    with open(file_path, "w") as file:
+        for employee in employees:
+
+
 except FileExistsError:
     print("That file already exists!")
