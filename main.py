@@ -1,18 +1,15 @@
-# Exception in Python
+# File Writing in Python
+
+employees = ["Eugene", "Squidward", "Spongebob", "Patrick"]
+
+file_path = "output.txt"
+
 
 try:
-    number = int(input("Enter a number:"))
-    print(1 / number)
-except ZeroDivisionError:
-    print("You can't divide by zero!")
+    with open(file_path, "w") as file:
+        for employee in employees:
+            file.write(employee)
+        print(f"txt file '{file_path}' was created")
 
-except ValueError:
-    print("Enter only numbers please!")
-
-except Exception:
-    print("Something went wrong")
-
-finally:
-    print("Do some cleanup here")
-
-
+except FileExistsError:
+    print("That file already exists!")
