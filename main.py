@@ -1,15 +1,10 @@
-# File Reading in Python
+# Date and Times in Python
+import datetime
 
-file_path = "input.txt"
+date = datetime.date(2025, 1, 2)
+today = datetime.date.today()
 
-try:  
-    with open (file_path, "r") as file:
-        content = file.read()
-        print(content)
+time = datetime.time(12, 30, 0)
+now = datetime.datetime.now()
 
-except FileNotFoundError:
-    print("That file was not found")
-
-except PermissionError:
-    print("You do not have permission to read that file")
-    
+print(now)
