@@ -1,15 +1,8 @@
-# File Writing in Python
+# File Reading in Python
 
-employees = ["Eugene", "Squidward", "Spongebob", "Patrick"]
+file_path = "input.txt"
 
-file_path = "output.txt"
-
-
-try:
-    with open(file_path, "w") as file:
-        for employee in employees:
-            file.write(employee)
-        print(f"txt file '{file_path}' was created")
-
-except FileExistsError:
-    print("That file already exists!")
+with open (file_path, "r") as file:
+    content = file.read()
+    print(content)
+    
