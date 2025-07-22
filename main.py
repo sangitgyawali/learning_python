@@ -1,14 +1,28 @@
-# Alarm Clock in Python
+# Multithreading in Python
 
+import threading
 import time
-import datetime
-import pygame
 
-def set_alarm(alarm_time):
-    print(f"Alarm set for {alarm_time}")
-    sound_file = "mymusic.mp3"
+def walk_dog():
+    time.sleep(8)
+    print("You finish walking the dog")
 
-if __name__ == "__main__":
-    alarm_time = input("Enter the alarm time (HH:MM:SS)")
-    set_alarm(alarm_time)
-        
+def take_out_trash():
+    time.sleep(2)
+    print("You take out the trash")
+
+def get_mail():
+    time.sleep(4)
+    print("You get the mail")
+
+chore1 = threading.Thread(target=walk_dog)
+chore2 = threading.Thread(target=take_out_trash)
+chore3 = threading.Thread(target=get_mail)
+
+chore1.start()
+chore2.start()
+chore3.start()
+
+chore1.join()
+chore2.join()
+chore3.join()
