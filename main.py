@@ -1,15 +1,21 @@
-# File Writing in Python
+# Date and Times in Python
+import datetime
 
-employees = ["Eugene", "Squidward", "Spongebob", "Patrick"]
+date = datetime.date(2025, 1, 2)
+today = datetime.date.today()
 
-file_path = "output.txt"
+time = datetime.time(12, 30, 0)
+now = datetime.datetime.now()
 
+now = now.strftime("%H:%M:%S %m-%d-%Y")
 
-try:
-    with open(file_path, "w") as file:
-        for employee in employees:
-            file.write(employee)
-        print(f"txt file '{file_path}' was created")
+print(now)
 
-except FileExistsError:
-    print("That file already exists!")
+target_datetime = datetime.datetime(2030, 1, 2, 12, 30, 1)
+current_datetime = datetime.datetime.now()
+
+if target_datetime < current_datetime:
+    print("Target date has passed")
+
+else:
+    print("Target date has not passed")
