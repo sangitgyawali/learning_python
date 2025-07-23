@@ -1,28 +1,13 @@
-# Multithreading in Python
+# Request API Python
 
-import threading
-import time
+import requests
 
-def walk_dog():
-    time.sleep(8)
-    print("You finish walking the dog")
+base_url = "https://pokeapi.co/api/v2/"
 
-def take_out_trash():
-    time.sleep(2)
-    print("You take out the trash")
+def get_pokemon_info(name):
+    url = f"{base_url}/pokemon/{name}"
+    response = requests.get(url)
+    print(response)
 
-def get_mail():
-    time.sleep(4)
-    print("You get the mail")
-
-chore1 = threading.Thread(target=walk_dog)
-chore2 = threading.Thread(target=take_out_trash)
-chore3 = threading.Thread(target=get_mail)
-
-chore1.start()
-chore2.start()
-chore3.start()
-
-chore1.join()
-chore2.join()
-chore3.join()
+pokemon_name = "pikachu"
+get_pokemon_info(pokemon_name)
