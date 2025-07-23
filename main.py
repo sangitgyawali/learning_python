@@ -18,3 +18,6 @@ def get_pokemon_info(name):
 
 pokemon_name = "pikachu"
 pokemon_info = get_pokemon_info(pokemon_name)
+
+if pokemon_info:
+    print(f"{pokemon_info["name"]}")
